@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i love you meri patni jee</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #e91e63;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite, rainbow 3s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes rainbow {
+            0% { color: #e91e63; }
+            16% { color: #9c27b0; }
+            33% { color: #673ab7; }
+            50% { color: #3f51b5; }
+            66% { color: #2196f3; }
+            83% { color: #00bcd4; }
+            100% { color: #e91e63; }
+        }
+        .message {
+            font-size: 1.2em;
+            line-height: 1.5;
+            max-width: 100%;
+            margin: 0 auto 30px;
+            color: #555;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .heart {
+            font-size: 2em;
+            color: #e91e63;
+            animation: float 3s ease-in-out infinite, rotate 4s linear infinite;
+            display: block;
+            margin-bottom: 15px;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .hearts-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .heart-bg {
+            position: absolute;
+            color: rgba(233, 30, 99, 0.6);
+            font-size: 1.5em;
+            animation: float-up 8s linear infinite;
+        }
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        .btn {
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+        }
+        .btn:hover {
+            background: #ad1457;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.6);
+        }
+        .surprise {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 1.3em;
+            color: #e91e63;
+            z-index: 20;
+            display: none;
+            animation: bounceIn 0.5s ease;
+            max-width: 90%;
+            width: 300px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        @keyframes bounceIn {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 15;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #e91e63;
+            animation: confetti-fall 3s linear infinite;
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        /* Mobile-specific adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+                width: 95%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .message {
+                font-size: 1em;
+                line-height: 1.4;
+            }
+            .heart {
+                font-size: 1.5em;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+            .surprise {
+                font-size: 1.1em;
+                width: 95%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-bg" id="heartsBg"></div>
+    <div class="confetti" id="confetti"></div>
+    <div class="container">
+        <h1>i love you meri patni jee! 💕</h1>
+        <div class="heart">💖</div>
+        <p class="message" id="mainMessage">
+            Tu meri zindagi ka sabse khoobsurat hissa hai. Har din tere saath bitana ek sapna sa lagta hai. Teri muskurahat se mera din ban jaata hai, aur teri baatein dil ko chu jaati hain. I love you more than words can say! Ab hamesha saath rahenge, promise. 😘
+        </p>
+        <button class="btn" onclick="nextSurprise()">Next Surprise! 🎁</button>
+    </div>
+    <div class="surprise" id="surpriseModal">
+        <p id="surpriseText"></p>
+        <button onclick="closeSurprise()" style="margin-top: 15px; padding: 8px 16px; font-size: 0.9em;">Continue 💕</button>
+    </div>
+
+    <script>
+        let surpriseIndex = 0;
+        const surprises = [
+            "Surprise 1: i love you meri patni jee meri bachi! ❤️",
+            "Surprise 2: ek baat batao meri bachi kab milne aaogi tum kab se wait kar rhe hai? 🎶",
+            "Surprise 3: tum agar pyaar karti to aa gai hoti abhi tak gudda ! 🌅",
+            "Surprise 4: jaldi se chalo kahi ghumne mere sath jaldi! 😍",
+            "Surprise 5: daily baat karna hoga promise karo ek din bhi miss nahi hona chahiye! 💍"
+        ];
+
+        // Floating hearts background - more frequent
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart-bg');
+            heart.innerHTML = ['💖', '💕', '💗', '💓'][Math.floor(Math.random() * 4)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 5 + 4) + 's';
+            document.getElementById('heartsBg').appendChild(heart);
+            setTimeout(() => heart.remove(), 8000);
+        }
+        setInterval(createHeart, 200);
+
+        // Next surprise function
+        function nextSurprise() {
+            createConfetti();
+            if (surpriseIndex < surprises.length) {
+                document.getElementById('surpriseText').textContent = surprises[surpriseIndex];
+                document.getElementById('surpriseModal').style.display = 'block';
+                surpriseIndex++;
+            } else {
+                surpriseIndex = 0;
+                // Optional: Change main message after full cycle
+                document.getElementById('mainMessage').textContent = " ab dekh li to roj roj time se baat kiya karo dimag kharab kar deti ho nahi to gali sunogi! 😘";
+            }
+        }
+
+        function closeSurprise() {
+            document.getElementById('surpriseModal').style.display = 'none';
+        }
+
+        // Simple confetti
+        function createConfetti() {
+            const confetti = document.getElementById('confetti');
+            for (let i = 0; i < 50; i++) {
+                const piece = document.createElement('div');
+                piece.classList.add('confetti-piece');
+                piece.style.left = Math.random() * 100 + 'vw';
+                piece.style.background = ['#e91e63', '#9c27b0', '#3f51b5', '#00bcd4'][Math.floor(Math.random() * 4)];
+                piece.style.animationDelay = Math.random() * 3 + 's';
+                piece.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                confetti.appendChild(piece);
+                setTimeout(() => piece.remove(), 5000);
+            }
+        }
+
+        // Initial confetti on load
+        window.onload = () => createConfetti();
+    </script>
+</body>
+</html>
